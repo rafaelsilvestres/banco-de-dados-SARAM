@@ -60,3 +60,13 @@ Essa seção compreende o minimundo, que corresponde a uma representação simpl
 Nesse contexto, temos como objetivo construir um banco de dados que centralize e estruture as informações necessárias para gerenciar o catálogo de produtos, controlar estoque, registrar entradas e saídas, bem como apoiar a reposição. O foco é acadêmico: não haverá implantação real, mas o projeto reflete as regras e necessidades do negócio.
 
 ---
+
+## Projeto Conceitual 
+
+Essa seção compreende o projeto conceitual do banco de dados SARAM, no qual é apresentado um Diagrama Entidade Relacionamento, uma representação gráfica de como os dados e informações da casa de ração são organizados.
+
+[Diagrama ER](imagens/diagramaER_final.png)
+
+---
+
+
