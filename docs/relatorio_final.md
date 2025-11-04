@@ -65,7 +65,7 @@ Nesse contexto, temos como objetivo construir um banco de dados que centralize e
 
 Essa seção compreende o projeto conceitual do banco de dados SARAM, no qual é apresentado um Diagrama Entidade Relacionamento, uma representação gráfica de como os dados e informações da casa de ração são organizados.
 
-[Diagrama ER](imagens/diagramaER_final.png)
+[Diagrama ER](imagens/diagramaER_final_A.png)
 
 ---
 
