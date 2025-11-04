@@ -69,4 +69,33 @@ Essa seção compreende o projeto conceitual do banco de dados SARAM, no qual é
 
 ---
 
+## Projeto Lógico 
+
+Essa seção compreende o projeto lógico do banco de dados SARAM. Nessa etapa, traduzimos os dados representados na etapa anterior pelo diagrama ER, para um modelo de tabelas, especificando as colunas, chaves primárias e estrangeiras. Nesse contexto, nos baseamos em um SGBD de modelo relacional, de modo a estruturar nossos dados de maneira lógica, nos preparando para uma implementação física. A seguir estão descritas as tabelas e seus atributos: 
+
+- **Tabela Produto** (`codigo`, nome, categoria, unidade_venda, validade, quantidade)
+
+- **Tabela Racao** (`cod_produto`<span style="color:red">[FK]</span>, especie_alvo, fase_vida, porte)
+
+- **Tabela ReposicaoGranel** (`id_reposicao`, quantidade, id_graneleiro, cod_produto<span style="color:red">[FK]</span>)
+
+- **Tabela Venda** (`cod_venda`, forma_pagamento, data, valor_total_venda)
+
+- **Tabela ItensVenda** (`cod_venda`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, quantidade, preco)
+
+- **Tabela Fornecedor** (`CNPJ`, nome)
+
+- **Tabela Telefones** (`CNPJ`<span style="color:red">[FK]</span>, telefone)
+
+- **Tabela Fornece** (`CNPJ`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, tempo_entrega, preco)
+
+- **Tabela Pedido** (`cod_pedido`, CNPJ <span style="color:red">[FK]</span>, data, valor_total_compra)
+
+- **Tabela ItensPedido** (`cod_pedido`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, quantidade, preco)
+
+O projeto lógico tem referência direta com o projeto conceitual, no qual foram mapeadas seis entidades e três relações, transformando-as em tabelas para o modelo lógico-relacional. 
+
+---
+
+
 
