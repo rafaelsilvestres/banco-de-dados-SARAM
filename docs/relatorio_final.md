@@ -65,7 +65,7 @@ Nesse contexto, temos como objetivo construir um banco de dados que centralize e
 
 Essa seção compreende o projeto conceitual do banco de dados SARAM, no qual é apresentado um Diagrama Entidade Relacionamento, uma representação gráfica de como os dados e informações da casa de ração são organizados.
 
-[Diagrama ER](imagens/diagramaER_final_A.png)
+[Diagrama ER](imagens/ProjetoConceitual_Final(azul).png)
 
 ---
 
@@ -73,27 +73,41 @@ Essa seção compreende o projeto conceitual do banco de dados SARAM, no qual é
 
 Essa seção compreende o projeto lógico do banco de dados SARAM. Nessa etapa, traduzimos os dados representados na etapa anterior pelo diagrama ER, para um modelo de tabelas, especificando as colunas, chaves primárias e estrangeiras. Nesse contexto, nos baseamos em um SGBD de modelo relacional, de modo a estruturar nossos dados de maneira lógica, nos preparando para uma implementação física. A seguir estão descritas as tabelas e seus atributos: 
 
-- **Tabela Produto** (`codigo`, nome, categoria, unidade_venda, validade, quantidade)
+- **Produto** (`codigo`, nome, categoria, unidade_venda, validade, quantidade)
 
-- **Tabela Racao** (`cod_produto`<span style="color:red">[FK]</span>, especie_alvo, fase_vida, porte)
+- **Racao** (`codigo`, nome, categoria, unidade_venda, validade, quantidade, especie_alvo, fase_vida, porte)
 
-- **Tabela ReposicaoGranel** (`id_reposicao`, quantidade, id_graneleiro, cod_produto<span style="color:red">[FK]</span>)
+- **Graneleiro** (`id_graneleiro`, nome, quantidade)  
+  **Graneleiro [nome] → Racao [nome]**
 
-- **Tabela Venda** (`cod_venda`, forma_pagamento, data, valor_total_venda)
+- **Reposicao** (`codigo, id_graneleiro`, data, quantidade)  
+  **Reposicao [codigo] → Racao [codigo]**  
+  **Reposicao [id_graneleiro] → Graneleiro [id_graneleiro]**
 
-- **Tabela ItensVenda** (`cod_venda`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, quantidade, preco)
+- **Venda** (`cod_venda`, forma_pagamento, data, valor_total_venda)
 
-- **Tabela Fornecedor** (`CNPJ`, nome)
+- **ItensVenda** (`cod_venda, cod_produto`, quantidade, preco)  
+  **ItensVenda [cod_venda] → Venda [cod_venda]**  
+  **ItensVenda [cod_produto] → Produto [codigo]**
 
-- **Tabela Telefones** (`CNPJ`<span style="color:red">[FK]</span>, telefone)
+- **Fornecedor** (`CNPJ`, nome)
 
-- **Tabela Fornece** (`CNPJ`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, tempo_entrega, preco)
+- **Telefones** (`CNPJ, telefone`)  
+  **Telefones [CNPJ] → Fornecedor [CNPJ]**
 
-- **Tabela Pedido** (`cod_pedido`, CNPJ <span style="color:red">[FK]</span>, data, valor_total_compra)
+- **Fornece** (`CNPJ, cod_produto`, tempo_entrega, preco)  
+  **Fornece [CNPJ] → Fornecedor [CNPJ]**  
+  **Fornece [cod_produto] → Produto [codigo]**
 
-- **Tabela ItensPedido** (`cod_pedido`<span style="color:red">[FK]</span>, `cod_produto`<span style="color:red">[FK]</span>, quantidade, preco)
+- **Pedido** (`cod_pedido`, CNPJ, data, valor_total_compra)  
+  **Pedido [CNPJ] → Fornecedor [CNPJ]**
 
-O projeto lógico tem referência direta com o projeto conceitual, no qual foram mapeadas seis entidades e três relações, transformando-as em tabelas para o modelo lógico-relacional. 
+- **ItensPedido** (`cod_pedido, cod_produto`, quantidade, preco)  
+  **ItensPedido [cod_pedido] → Pedido [cod_pedido]**  
+  **ItensPedido [cod_produto] → Produto [codigo]**
+
+
+O projeto lógico tem referência direta com o projeto conceitual, no qual foram mapeadas seis entidades e quatro relações, transformando-as em tabelas para o modelo lógico-relacional. 
 
 ---
 
