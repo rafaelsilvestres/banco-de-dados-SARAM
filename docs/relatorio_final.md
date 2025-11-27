@@ -130,6 +130,14 @@ Nessa perspectiva, utilizamos do sql para responder perguntas voltadas para o ne
 
 ---
 
+## Conclusão 
+
+O desenvolvimento deste projeto de Banco de Dados permitiu aplicar de forma integrada os principais conceitos estudados ao longo da disciplina, desde a etapa de levantamento de requisitos e construção do minimundo até a elaboração dos modelos conceitual, lógico e físico. Elaboramos o projeto com a parceria do pet shop Saúde Animal, o qual contextualizou o negócio e especificou suas regras por meio de reuniões, registradas, por exemplo, pelo momento a seguir: 
+
+[Foto da reunião](imagens/foto_reuniao.png)
+
+Assim, a colaboração com a empresa foi de extrema importância para associar os conceitos aprendidos com um negócio real, representando os fluxos reais da empresa por meio da modelagem das suas operações de estoque, vendas, fornecedores e reposições. Portanto, o projeto contribuiu significativamente para consolidar o aprendizado, aproximando a teoria da prática e proporcionando uma visão mais completa do papel dos bancos de dados no apoio às operações e à tomada de decisões.
+
 
 
 
