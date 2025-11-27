@@ -107,7 +107,7 @@ Essa seção compreende o projeto lógico do banco de dados SARAM. Nessa etapa, 
   **ItensPedido [cod_produto] → Produto [codigo]**
 
 
-O projeto lógico tem referência direta com o projeto conceitual, no qual foram mapeadas seis entidades e quatro relações, transformando-as em tabelas para o modelo lógico-relacional. 
+O projeto lógico tem referência direta com o projeto conceitual, no qual foram mapeadas seis entidades e cinco relações, transformando-as em tabelas para o modelo lógico-relacional. 
 
 ---
 
