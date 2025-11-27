@@ -111,5 +111,26 @@ O projeto lógico tem referência direta com o projeto conceitual, no qual foram
 
 ---
 
+## Projeto Físico
+
+Essa seção compreende o projeto físico do banco de dados SARAM, no qual implementamos as regras do negócio descritas no projeto conceitual e lógico, em um código de linguagem SQL. Nesse contexto, para manipular os dados da casa de ração, utilizamos o SGBD (Sistema Gerenciador de Banco de Dados) Postgresql.
+
+O script a seguir na linguagem sql foi usado para criar as tabelas:
+
+[Create Table](../src/create.sql)
+
+Além disso, populamos as tabelas com dados fictícios que representam a casa de ração Saúde Animal. Não usamos os dados reais da empresa para não comprometer a segurança de seus dados. Para a inserção de valores, elaboramos o seguinte script:
+
+[Inserts](../src/insert.sql)
+
+Nessa perspectiva, utilizamos do sql para responder perguntas voltadas para o negócio, relacionadas a consultas reais feitas pela casa de ração. Desse modo, para resolver tais problemas, elaboramos códigos com o comando SELECT, gerando assim, os resultados em forma de tabela. 
+
+[Selects](../src/select.sql)
+
+---
+
+
+
+
 
 
